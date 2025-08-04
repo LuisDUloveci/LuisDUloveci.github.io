@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: #0b0f0a;
+  color: #3aff00;
+  margin: 0;
+  padding: 40px 20px;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow:
+    0 0 5px #3aff00,
+    0 0 10px #3aff00,
+    0 0 20px #3aff00;
+  margin-bottom: 5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #3aff00;
+  padding-bottom: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.3rem;
+  margin: 0 0 25px 0;
+  color: #2ccc00cc;
+  text-shadow: 0 0 5px #2ccc00aa;
+  letter-spacing: 2px;
+  font-style: italic;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.editor, .info-section {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #05130c, #0a210f);
+  border: 3px solid #3aff00;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow:
+    inset 0 0 20px #3aff00aa,
+    0 0 10px #3aff00aa;
+  margin-bottom: 60px;
+}
+
+.input-box {
+  border: 2px solid #3aff00;
+  background-color: #071007;
+  padding: 15px;
+  font-size: 1.2rem;
+  min-height: 100px;
+  cursor: text;
+  color: #3aff00;
+  white-space: pre-wrap;
+  outline: none;
+  box-shadow:
+    inset 0 0 5px #3aff00bb;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+.input-box:focus {
+  box-shadow:
+    0 0 15px #3aff00,
+    inset 0 0 10px #3aff00cc;
+}
+
+.output-box {
+  border: 2px solid #3aff00;
+  background-color: #071007;
+  padding: 15px;
+  margin-top: 10px;
+  min-height: 60px;
+  font-size: 1.5rem;
+  white-space: pre-wrap;
+  color: #3aff00;
+  text-shadow:
+    0 0 4px #3aff00cc;
+  border-radius: 5px;
+  box-shadow:
+    inset 0 0 5px #3aff00bb;
+  user-select: text;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #3aff00;
+  color: #3aff00;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  padding: 10px 18px;
+  margin: 10px 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+button:hover {
+  background-color: #3aff00;
+  color: #071007;
+  box-shadow:
+    0 0 10px #3aff00,
+    inset 0 0 8px #071007;
+}
+
+.click-box {
+  width: 300px;
+  height: 300px;
+  margin: 30px auto 0;
+  border: 2px dashed #3aff00;
+  background-color: #071007;
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3aff00;
+  user-select: none;
+  border-radius: 5px;
+  box-shadow:
+    inset 0 0 20px #3aff0055;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.click-box:active {
+  background-color: #0a1f0a;
+  box-shadow:
+    inset 0 0 40px #3aff00aa;
+}
+
+#modoAtual {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px #3aff00aa;
+}
+
+footer {
+  margin-top: 50px;
+  margin-left: 420px;
+  color: #0f390faa;
+  font-size: 0.85rem;
+  user-select: none;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  text-align: center;
+  max-width: 700px;
+}
+
+/* Nova seção info - layout em colunas */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.4;
+}
+
+.historia-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.historia-texto {
+  flex: 1 1 320px;
+  max-width: 320px;
+  color: #3aff00dd;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.historia-texto h3 {
+  margin-top: 0;
+  border-bottom: 1px solid #3aff00cc;
+  padding-bottom: 4px;
+}
+
+.historia-imagens {
+  flex: 1 1 220px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.historia-imagens img {
+  width: 100%;
+  border: 2px solid #3aff00;
+  border-radius: 6px;
+  box-shadow:
+    0 0 8px #3aff00bb;
+}
+
+.historia-imagens figcaption {
+  font-size: 0.75rem;
+  color: #2ccc0099;
+  text-align: center;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.morse-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.morse-table th, .morse-table td {
+  border: 1px solid #3aff00;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  user-select: text;
+}
+
+.morse-table th {
+  background-color: #072107;
+}
+
+.morse-table td {
+  background-color: #0a290a;
+}
+
+.back-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #3aff00;
+  background-color: transparent;
+  color: #3aff00;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  max-width: 200px;
+  text-align: center;
+}
+.back-button:hover {
+  background-color: #3aff00;
+  color: #071007;
+  box-shadow:
+    0 0 10px #3aff00,
+    inset 0 0 8px #071007;
+}
+
+/* === Media Queries para responsividade === */
+@media (max-width: 640px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    max-width: 100%;
+    padding-bottom: 6px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .editor, .info-section {
+    max-width: 100%;
+    padding: 15px;
+    margin-bottom: 40px;
+  }
+
+  .input-box {
+    font-size: 1rem;
+    min-height: 80px;
+    padding: 12px;
+  }
+
+  .output-box {
+    font-size: 1.2rem;
+    min-height: 50px;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    margin: 8px 3px 0;
+  }
+
+  .click-box {
+    width: 90vw;
+    height: 90vw;
+    max-width: 300px;
+    max-height: 300px;
+    font-size: 1.1rem;
+  }
+
+  footer {
+    margin: 30px 0 0 0;
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .historia-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .historia-texto, .historia-imagens {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .historia-imagens {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .historia-imagens img {
+    max-width: 120px;
+  }
+
+  .morse-table th, .morse-table td {
+    font-size: 1rem;
+    padding: 6px 8px;
+  }
+
+  .back-button {
+    max-width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
