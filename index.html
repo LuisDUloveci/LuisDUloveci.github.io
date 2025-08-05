@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <title>Morse Command Center - Central de Comunicação Secreta WWII</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <h1 id="topo">MORSE COMMAND CENTER</h1>
   <h2>Central de Comunicação Secreta WWII</h2>
 
   <div class="editor" id="mainEditor">
-    <div class="input-box" contenteditable="true" id="morseInput" spellcheck="false" aria-label="Entrada de código Morse ou texto"></div>
+    <div class="input-box" contenteditable="true" id="morseInput" spellcheck="false"
+      aria-label="Entrada de código Morse ou texto"></div>
     <button onclick="traduzir()">TRADUZIR</button>
     <button onclick="alternarModo()">Alternar para Texto → Morse</button>
     <button onclick="mostrarInfo()">História & Alfabeto</button>
     <div id="modoAtual"><strong>Modo atual:</strong> Morse → Texto</div>
     <div class="output-box" id="morseOutput" aria-live="polite" aria-label="Área de saída da tradução"></div>
 
-    <div class="click-box"
-         onmousedown="iniciarClique()"
-         onmouseup="finalizarClique()"
-         ontouchstart="iniciarClique()"
-         ontouchend="finalizarClique()"
-         role="button" tabindex="0"
-         aria-label="Área para entrada de código Morse via cliques">
+    <div class="click-box" onmousedown="iniciarClique()" onmouseup="finalizarClique()" ontouchstart="iniciarClique()"
+      ontouchend="finalizarClique()" role="button" tabindex="0"
+      aria-label="Área para entrada de código Morse via cliques">
       CLIQUE AQUI PARA DIGITAR CÓDIGO MORSE
     </div>
 
@@ -40,26 +39,26 @@
       <div class="historia-texto">
         <h3>Origem e Criação</h3>
         <p>
-          O código Morse foi inventado por <strong>Samuel Morse</strong> em 1836, 
-          com o intuito de facilitar a comunicação à distância utilizando sinais elétricos 
-          transmitidos por telégrafos. Ele criou um sistema baseado em pontos e traços, 
-          representando letras e números, que poderiam ser enviados rapidamente por pulsos 
+          O código Morse foi inventado por <strong>Samuel Morse</strong> em 1836,
+          com o intuito de facilitar a comunicação à distância utilizando sinais elétricos
+          transmitidos por telégrafos. Ele criou um sistema baseado em pontos e traços,
+          representando letras e números, que poderiam ser enviados rapidamente por pulsos
           elétricos.
         </p>
 
         <h3>Uso durante a Segunda Guerra Mundial</h3>
         <p>
           Durante a Segunda Guerra Mundial, o código Morse foi uma ferramenta essencial para
-           comunicações militares e de inteligência. Sua simplicidade e a capacidade de ser 
-           transmitido em condições adversas o tornaram indispensável para o envio de 
-           mensagens secretas, coordenar operações e garantir o contato entre unidades.
+          comunicações militares e de inteligência. Sua simplicidade e a capacidade de ser
+          transmitido em condições adversas o tornaram indispensável para o envio de
+          mensagens secretas, coordenar operações e garantir o contato entre unidades.
         </p>
 
         <h3>Importância histórica</h3>
         <p>
-          Além da guerra, o código Morse revolucionou as telecomunicações, possibilitando a 
-          rápida transmissão de informações por longas distâncias antes inacessíveis. Ele 
-          pavimentou o caminho para as tecnologias modernas de comunicação e ainda é usado 
+          Além da guerra, o código Morse revolucionou as telecomunicações, possibilitando a
+          rápida transmissão de informações por longas distâncias antes inacessíveis. Ele
+          pavimentou o caminho para as tecnologias modernas de comunicação e ainda é usado
           em algumas aplicações até hoje.
         </p>
       </div>
@@ -84,36 +83,136 @@
     <table class="morse-table" aria-label="Tabela do alfabeto e números em código Morse">
       <thead>
         <tr>
-          <th>Letra</th><th>Código Morse</th><th>Número</th><th>Código Morse</th>
+          <th>Letra</th>
+          <th>Código Morse</th>
+          <th>Letra</th>
+          <th>Código Morse</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>A</td><td>.-</td><td>0</td><td>-----</td></tr>
-        <tr><td>B</td><td>-...</td><td>1</td><td>.----</td></tr>
-        <tr><td>C</td><td>-.-.</td><td>2</td><td>..---</td></tr>
-        <tr><td>D</td><td>-..</td><td>3</td><td>...--</td></tr>
-        <tr><td>E</td><td>.</td><td>4</td><td>....-</td></tr>
-        <tr><td>F</td><td>..-.</td><td>5</td><td>.....</td></tr>
-        <tr><td>G</td><td>--.</td><td>6</td><td>-....</td></tr>
-        <tr><td>H</td><td>....</td><td>7</td><td>--...</td></tr>
-        <tr><td>I</td><td>..</td><td>8</td><td>---..</td></tr>
-        <tr><td>J</td><td>.---</td><td>9</td><td>----.</td></tr>
-        <tr><td>K</td><td>-.-</td><td></td><td></td></tr>
-        <tr><td>L</td><td>.-..</td><td></td><td></td></tr>
-        <tr><td>M</td><td>--</td><td></td><td></td></tr>
-        <tr><td>N</td><td>-.</td><td></td><td></td></tr>
-        <tr><td>O</td><td>---</td><td></td><td></td></tr>
-        <tr><td>P</td><td>.--.</td><td></td><td></td></tr>
-        <tr><td>Q</td><td>--.-</td><td></td><td></td></tr>
-        <tr><td>R</td><td>.-.</td><td></td><td></td></tr>
-        <tr><td>S</td><td>...</td><td></td><td></td></tr>
-        <tr><td>T</td><td>-</td><td></td><td></td></tr>
-        <tr><td>U</td><td>..-</td><td></td><td></td></tr>
-        <tr><td>V</td><td>...-</td><td></td><td></td></tr>
-        <tr><td>W</td><td>.--</td><td></td><td></td></tr>
-        <tr><td>X</td><td>-..-</td><td></td><td></td></tr>
-        <tr><td>Y</td><td>-.--</td><td></td><td></td></tr>
-        <tr><td>Z</td><td>--..</td><td></td><td></td></tr>
+        <!-- Letras A a M -->
+        <tr>
+          <td>A</td>
+          <td>.-</td>
+          <td>N</td>
+          <td>-.</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>-...</td>
+          <td>O</td>
+          <td>---</td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>-.-.</td>
+          <td>P</td>
+          <td>.--.</td>
+        </tr>
+        <tr>
+          <td>D</td>
+          <td>-..</td>
+          <td>Q</td>
+          <td>--.-</td>
+        </tr>
+        <tr>
+          <td>E</td>
+          <td>.</td>
+          <td>R</td>
+          <td>.-.</td>
+        </tr>
+        <tr>
+          <td>F</td>
+          <td>..-.</td>
+          <td>S</td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>G</td>
+          <td>--.</td>
+          <td>T</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>H</td>
+          <td>....</td>
+          <td>U</td>
+          <td>..-</td>
+        </tr>
+        <tr>
+          <td>I</td>
+          <td>..</td>
+          <td>V</td>
+          <td>...-</td>
+        </tr>
+        <tr>
+          <td>J</td>
+          <td>.---</td>
+          <td>W</td>
+          <td>.--</td>
+        </tr>
+        <tr>
+          <td>K</td>
+          <td>-.-</td>
+          <td>X</td>
+          <td>-..-</td>
+        </tr>
+        <tr>
+          <td>L</td>
+          <td>.-..</td>
+          <td>Y</td>
+          <td>-.--</td>
+        </tr>
+        <tr>
+          <td>M</td>
+          <td>--</td>
+          <td>Z</td>
+          <td>--..</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="morse-table" aria-label="Tabela do alfabeto e números em código Morse">
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Código Morse</th>
+          <th>Número</th>
+          <th>Código Morse</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Numeros 0 a 9 -->
+        <tr>
+          <td>0</td>
+          <td>-----</td>
+          <td>5</td>
+          <td>.....</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>.----</td>
+          <td>6</td>
+          <td>-....</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>..---</td>
+          <td>7</td>
+          <td>--...</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>...--</td>
+          <td>8</td>
+          <td>---..</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>....-</td>
+          <td>9</td>
+          <td>----.</td>
+        </tr>
       </tbody>
     </table>
 
@@ -121,11 +220,12 @@
   </div>
 
   <footer>
-    Sistema de comunicação Morse - Missão Segunda Guerra Mundial - Desenvolvido para 
+    Sistema de comunicação Morse - Missão Segunda Guerra Mundial - Desenvolvido para
     operações secretas
   </footer>
 
   <script src="java.js"></script>
 
 </body>
+
 </html>
